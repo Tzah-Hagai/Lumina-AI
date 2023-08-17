@@ -19,12 +19,14 @@ const MobileSidebar = ({
   useEffect(() => {
     setIsMounted(true)
   }, [])
+
   if (!isMounted) {
     return null
   }
+  
   return (
     <Sheet>
-      <SheetTrigger>
+      <SheetTrigger asChild>
         <Button variant="ghost" size="icon" className="md:hidden">
           <Menu />
         </Button>
